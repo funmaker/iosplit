@@ -35,7 +35,7 @@
   "files": [
     "lib/**/*"
   ],
-  "tags": [
+  "keywords": [
     "blessed",
     "terminal",
     "cli",
