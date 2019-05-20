@@ -2,7 +2,7 @@
 
 Library to separate input and output in cli applications. IOSplit allows you to
 print text to your terminal without any interference with user input. It uses
-[blessed](https://www.npmjs.com/package/blessed) under the good.
+[blessed](https://www.npmjs.com/package/blessed) under the hood.
 
 ![iosplit](https://raw.githubusercontent.com/funmaker/iosplit/master/preview.gif)
 
@@ -17,7 +17,7 @@ print text to your terminal without any interference with user input. It uses
 ## Example
 
 ``` js
-const IOSplit = require("../");
+const IOSplit = require("iosplit");
 
 // Create an IOSplit instance
 const iosplit = new IOSplit({
@@ -112,15 +112,15 @@ Fires when one of the following occur:
 - Readline fires 'close' event if using fallback.
 - iosplit.stop() is called
 
-This events indicates that no more 'line' events will fire, until IOSplit
+This event indicates that no more 'line' events will fire, until IOSplit
 instance is restarted.
 
-***Note**: If IOSplit instance is using fallback, it will not be able to receive
-any more input once received EOT. Even after restart.*
+***Note**: If IOSplit instance is using fallback, it will not be able to
+receive any more input once received EOT. Even after restart.*
 
 ### event 'log'
 
-Fires on adding new log. Provided string contains formatted log entry.
+Fires when adding a new log. Provided string contains formatted log entry.
 
 ### event 'start'
 
