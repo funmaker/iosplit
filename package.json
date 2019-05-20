@@ -1,0 +1,54 @@
+{
+  "name": "iosplit",
+  "version": "1.0.0",
+  "description": "Separate input and output to keep your cli clean.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/index.ts example/index.js",
+    "example": "node example/index.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funmaker/iosplit.git"
+  },
+  "author": "Fun Maker <funmaker95@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/funmaker/iosplit/issues"
+  },
+  "homepage": "https://github.com/funmaker/iosplit#readme",
+  "devDependencies": {
+    "@types/blessed": "^0.1.11",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "tags": [
+    "blessed",
+    "terminal",
+    "cli",
+    "curses",
+    "ncurses",
+    "console",
+    "input",
+    "output",
+    "split",
+    "separate"
+  ],
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "chalk": "^2.4.2"
+  }
+}
