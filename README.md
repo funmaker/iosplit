@@ -101,6 +101,10 @@ console methods to their original state.
 
 Analogous to console counterparts. Use them if `config.noConsole` is `true`.
 
+### iosplit.refresh()
+
+Re-renders interface.
+
 ### event 'line'
 
 Fires on new user input. Provided string contains entered line.

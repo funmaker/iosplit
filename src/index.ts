@@ -140,6 +140,7 @@ export = class IOSplit extends EventEmitter {
       this.emit("line", text);
       inputBar.clearValue();
       inputBar.focus();
+      screen.render();
       
       this.history.push(text);
       this.historyPos = this.history.length;
@@ -186,6 +187,10 @@ export = class IOSplit extends EventEmitter {
     }
     this.emit("stop");
   }
+  
+  refresh = () => {
+    if(this.screen) this.screen.render();
+  };
   
   log = (message: any = "", ...rest: any[]) => {
     if(!this.enabled) return;
