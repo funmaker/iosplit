@@ -52,7 +52,7 @@ export = class IOSplit extends EventEmitter {
     }
     
     // Readline fallback
-    if(!process.stdout.isTTY && !this.config.force) {
+    if((!process.stdout.isTTY && this.config.force === undefined) || this.config.force === false) {
       this.gui = false;
       this.rl = readline.createInterface({
         input: process.stdin,

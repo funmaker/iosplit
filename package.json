@@ -1,6 +1,6 @@
 {
   "name": "iosplit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Separate input and output to keep your cli clean.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

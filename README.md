@@ -62,16 +62,16 @@ npm run example
 Creates new `IOSplit` instance with specified config. `config` argument is an
 object of containing any of the following options:
 
-| Property                  | type              | default | description                                                             |
-|:--------------------------|:------------------|:--------|:------------------------------------------------------------------------|
-| `noConsole`               | boolean           | `false` | Do not override console methods.                                        |
-| `force`                   | boolean           | `false` | Do not check if stdout is a terminal.                                   |
-| `history`                 | boolean or string | `false` | Specify the name of history file. Use `.history` if `true` is provided. |
-| `ignoreUncaughtException` | boolean           | `false` | Do not destroy blessed screen on uncaught exception.                    |
-| `ignoreCtrlC`             | boolean           | `false` | Do not send SIGINT on Ctrl-C.                                           |
-| `style.log`               | blessed style     | `false` | Style for log Element.                                                  |
-| `style.line`              | blessed style     | `false` | Style for line Element.                                                 |
-| `style.input`             | blessed style     | `false` | Style for input Element.                                                |
+| Property                  | type                 | default     | description                                                             |
+|:--------------------------|:---------------------|:------------|:------------------------------------------------------------------------|
+| `noConsole`               | boolean              | `false`     | Do not override console methods.                                        |
+| `force`                   | boolean or undefined | `undefined` | Forcefully disables or enables screen splitting(blessed). Use `undefined` to automatically determine based on whenever stdout is a terminal. |
+| `history`                 | boolean or string    | `false`     | Specify the name of history file. Use `.history` if `true` is provided. |
+| `ignoreUncaughtException` | boolean              | `false`     | Do not destroy blessed screen on uncaught exception.                    |
+| `ignoreCtrlC`             | boolean              | `false`     | Do not send SIGINT on Ctrl-C.                                           |
+| `style.log`               | blessed style        | `false`     | Style for log Element.                                                  |
+| `style.line`              | blessed style        | `false`     | Style for line Element.                                                 |
+| `style.input`             | blessed style        | `false`     | Style for input Element.                                                |
 
 Check out Blessed [documentation](https://github.com/chjj/blessed/blob/master/README.md#options-2)
 to find more information regarding styling.
